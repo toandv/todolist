@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const counterSlice = createSlice({
   name: 'counter',
   initialState: {
-    value: 0,
+    value: 1000,
+    name: 'counter state',
   },
   reducers: {
     increment: state => {
@@ -38,5 +39,6 @@ export const incrementAsync = amount => dispatch => {
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state) => state.counter.value)`
 export const selectCount = state => state.counter.value;
+export const selectName = state => state.counter.name;
 
 export default counterSlice.reducer;
